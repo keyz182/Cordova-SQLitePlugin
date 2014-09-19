@@ -190,6 +190,9 @@ static void sqlite_regexp(sqlite3_context* context, int argc, sqlite3_value** va
     NSMutableDictionary *options = [command.arguments objectAtIndex:0];
 
     NSString *dbname = [self getDBPath:[options objectForKey:@"name"]];
+    
+    const char *key = [[options objectForKey:@"password"] UTF8String];
+    
     NSValue *dbPointer;
 
     if (dbname == NULL) {
@@ -213,7 +216,7 @@ static void sqlite_regexp(sqlite3_context* context, int argc, sqlite3_value** va
             else {
                 // Extra for SQLCipher:
                 // const char *key = [@"your_key_here" UTF8String];
-                // if(key != NULL) sqlite3_key(db, key, strlen(key));
+                if(key != NULL) sqlite3_key(db, key, strlen(key));
 
 		sqlite3_create_function(db, "regexp", 2, SQLITE_ANY, NULL, &sqlite_regexp, NULL, NULL);
 	
