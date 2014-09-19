@@ -6,6 +6,16 @@ License for Android & WP(8) versions: MIT or Apache 2.0
 
 License for iOS version: MIT only
 
+## SQLCipher
+On iOS: 
+```pod install SQLCipher```
+Remove libsqlite3.dylib from Linked Frameworks
+
+On Android:
+http://www.neevtech.com/blog/2014/04/22/integrating-sqlcipher-with-existing-sqliteplugin-in-phonegap/
+
+Follow the steps until "Remove import android.database.sqlite.*..."
+
 ## Support September 2014
 
 [@brodybits (Chris Brody)](https://github.com/brodybits) is away on vacation until September 18th. Support will be provided on a limited basis.
