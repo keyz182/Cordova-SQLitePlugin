@@ -8,7 +8,9 @@ License for iOS version: MIT only
 
 ## SQLCipher
 ###On iOS: 
+Run:
 ```pod install SQLCipher```
+
 Remove libsqlite3.dylib from Linked Frameworks
 
 ###On Android:
