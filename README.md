@@ -8,10 +8,14 @@ License for iOS version: MIT only
 
 ## SQLCipher
 ###On iOS: 
-Run:
+Either follow this guide to add SQLCipher to the build (https://www.zetetic.net/sqlcipher/ios-tutorial)
+
+Or run:
 ```pod install SQLCipher```
 
-Remove libsqlite3.dylib from Linked Frameworks
+Note, using pods currently breaks Ionic/Cordova/Phonegap build scripts, use with caution.
+
+For both steps, remember to remove libsqlite3.dylib from Linked Frameworks
 
 ###On Android:
 http://www.neevtech.com/blog/2014/04/22/integrating-sqlcipher-with-existing-sqliteplugin-in-phonegap/
