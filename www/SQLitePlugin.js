@@ -132,6 +132,10 @@
       ]);
     }
   };
+  
+  SQLitePlugin.prototype.end = function(success, error) {
+    cordova.exec(success, error, "SQLitePlugin", "end", []);
+  };
 
   SQLitePlugin.prototype.executeSql = function(statement, params, success, error) {
     var myerror, myfn, mysuccess;
