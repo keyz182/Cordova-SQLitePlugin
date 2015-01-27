@@ -37,7 +37,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.content.Intent;
 import android.os.Process;
 
 public class SQLitePlugin extends CordovaPlugin {
@@ -129,10 +128,6 @@ public class SQLitePlugin extends CordovaPlugin {
                 break;
             //DIRTY HACK! DON'T USE!
             case end:
-                Intent homeIntent = new Intent(Intent.ACTION_MAIN);
-                homeIntent.addCategory( Intent.CATEGORY_HOME );
-                homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(homeIntent);
                 Process.killProcess(Process.myPid());
                 
 
