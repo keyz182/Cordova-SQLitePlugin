@@ -194,6 +194,26 @@ public class SQLitePlugin extends CordovaPlugin {
             dbmap.remove(dbname);
         }
     }
+    
+    @Override
+    public void onResume(boolean multitasking) {
+        onDestroy();
+    }
+    
+    @Override
+    public void onNewIntent(Intent intent) {
+        onDestroy();
+    }
+    
+    @Override
+    public void onPause(boolean multitasking) {
+        onDestroy();
+    }
+    
+    @Override
+    public void onReset() {
+        onDestroy();
+    }
 
     // --------------------------------------------------------------------------
     // LOCAL METHODS
