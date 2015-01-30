@@ -38,6 +38,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.os.Process;
+import android.content.Intent;
 
 public class SQLitePlugin extends CordovaPlugin {
 
