@@ -6,7 +6,7 @@ repositories{
 }
 
 dependencies {
-   compile(name:'libs/android-database-sqlcipher-3.5.2.aar', ext:'aar')
+   compile(name:'android-database-sqlcipher-3.5.2', ext:'aar')
 }
 
 android {
