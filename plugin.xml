@@ -22,7 +22,7 @@
     <!-- android -->
     <platform name="android">
 	<framework src="src/android/SQLitePlugin.gradle" custom="true" type="gradleReference" />
-    	<resource-file src="aar/android-database-sqlcipher-3.5.2.aar" target="libs/android-database-sqlcipher-3.5.2.aar" />
+    	<resource-file src="aar/android-database-sqlcipher-3.5.9.aar" target="libs/android-database-sqlcipher-3.5.2.aar" />
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity android:name="org.pgsqlite.SQLitePlugin"
